@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# 🔎 GitHub Blog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação criada como parte do curso da Rocketseat para praticar consumo de APIs com **React** e **Axios**.  
+Neste projeto, consumi a API pública do GitHub para exibir informações do meu perfil, incluindo minha foto e meus repositórios.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [Axios](https://axios-http.com/)
+- [Vite](https://vitejs.dev/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-## Expanding the ESLint configuration
+## 🔧 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Busca e exibição dos dados do perfil do GitHub (foto, nome, bio, etc.)
+- Listagem de repositórios públicos
+- Links diretos para cada repositório
 
-- Configure the top-level `parserOptions` property like this:
+## 📂 Configuração do Ambiente
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Para acessar a API autenticada do GitHub, você precisa gerar um **token pessoal** e adicioná-lo a um arquivo `.env`:
+
+1. Clone o projeto e instale as dependências :
+```bash
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd github-blog
+
+npm install
+# ou
+yarn
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Rode a aplicação
+``` bash
+npm run dev
+# ou
+yarn dev
 ```
